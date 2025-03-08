@@ -39,18 +39,19 @@ h1 {
   background: #f03a64;
   border-radius: 0px 50%;
   position: absolute;
-  box-shadow: 0 0 10px #fdaabd;
+  box-shadow: 0 0 10px #fdaabd; /* Soft glow effect */
   z-index: 2;
   transform-origin: bottom right;
-  animation: petalClose 10s infinite;
+  animation: petalLeft 10s infinite;
 }
 
+/* Individual petal adjustments */
 .petal:nth-child(2) {
   transform-origin: right bottom;
   transform: rotate(90deg);
   background: #f03a64;
   left: -10px;
-  animation: petalOpen 10s infinite;
+  animation: petalRight 10s infinite;
 }
 
 .petal:nth-child(3) {
@@ -59,25 +60,24 @@ h1 {
   left: 10px;
   top: -20px;
   z-index: 1;
-  background: #f03a64;
+  background: #d1123f;
   transform-origin: bottom right;
-  animation: petalClose 10s infinite;
+  animation: petalLeft 10s infinite;
 }
 
 .petal:nth-child(4) {
-  transform: rotate(90deg);
+  transform: rotate(80deg);
   width: 40px;
   height: 40px;
   left: 0px;
   top: -20px;
   z-index: 1;
-  background: #f03a64;
+  background: #d1123f;
   transform-origin: bottom right;
-  animation: petalOpen 10s infinite;
+  animation: petalRight 10s infinite;
 }
 
 .petal:nth-child(5) {
-  transform: rotate(10deg);
   width: 50px;
   height: 50px;
   /*border-radius: 20px;*/
@@ -85,6 +85,21 @@ h1 {
   top: -30px;
   z-index: 0;
   background: #d1123f;
+  animation: petalOpenTop 10s infinite;
+}
+
+/* center petal */
+.petal:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  background: #d1123f;
+
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  z-index: 1;
+  transform-origin: center;
+  animation: petalCenter 10s infinite;
 }
 
 .leaf {
@@ -122,6 +137,7 @@ h1 {
   transform: rotate(120deg);
 }
 
+/* Swaying animation (gentle movement) */
 @keyframes sway {
   50% {
     transform: translateY(35%);
@@ -131,20 +147,41 @@ h1 {
   }
 }
 
-@keyframes petalOpen {
+/* Petal rotating to the right */
+@keyframes petalRight {
   50% {
-    transform: rotate(110deg);
+    transform: rotate(100deg);
   }
   100% {
-    transform: rotate(90deg);
+    transform: rotate(80deg);
   }
 }
 
-@keyframes petalClose {
+/* Petal rotating to the left */
+@keyframes petalLeft {
   50% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(10deg);
+  }
+}
+
+/* Top petal subtle movement */
+@keyframes petalOpenTop {
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+/* Center petal subtle blooming */
+@keyframes petalCenter {
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
   }
 }
