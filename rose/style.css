@@ -42,7 +42,8 @@ h1 {
   box-shadow: 0 0 10px #fdaabd; /* Soft glow effect */
   z-index: 2;
   transform-origin: bottom right;
-  animation: petalLeft 10s infinite;
+  animation: petalLeft 3s infinite;
+  animation-delay: 1s;
 }
 
 /* Individual petal adjustments */
@@ -51,7 +52,8 @@ h1 {
   transform: rotate(90deg);
   background: #f03a64;
   left: -10px;
-  animation: petalRight 10s infinite;
+  animation: petalRight 3s infinite;
+  animation-delay: 1s;
 }
 
 .petal:nth-child(3) {
@@ -62,7 +64,8 @@ h1 {
   z-index: 1;
   background: #d1123f;
   transform-origin: bottom right;
-  animation: petalLeft 10s infinite;
+  animation: petalLeft 3s infinite;
+  animation-delay: 1s;
 }
 
 .petal:nth-child(4) {
@@ -74,7 +77,8 @@ h1 {
   z-index: 1;
   background: #d1123f;
   transform-origin: bottom right;
-  animation: petalRight 10s infinite;
+  animation: petalRight 3s infinite;
+  animation-delay: 1s;
 }
 
 .petal:nth-child(5) {
@@ -85,7 +89,8 @@ h1 {
   top: -30px;
   z-index: 0;
   background: #d1123f;
-  animation: petalOpenTop 10s infinite;
+  animation: petalOpenTop 3s infinite;
+  animation-delay: 1s;
 }
 
 /* center petal */
@@ -99,7 +104,8 @@ h1 {
   top: -15px;
   z-index: 1;
   transform-origin: center;
-  animation: petalCenter 10s infinite;
+  animation: petalCenter 3s infinite;
+  animation-delay: 1s;
 }
 
 .leaf {
